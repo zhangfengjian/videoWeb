@@ -1,0 +1,96 @@
+#canvas{
+    background:#fff;
+    overflow:hidden
+    .icon{
+        display:inline-block;
+        margin:0 -8px;
+        width:60px;
+        height:60px;
+        border-radius:50%;
+        text-align:center;
+        position:relative;
+        z-index:1;
+        color:#fff;
+        &:after{
+            pointer-events:none;
+            position:absolute;
+            width:100%;
+            height:100%;
+            border-radius:50%;
+            content:'';
+            -webkit-box-sizing:content-box;
+            -moz-box-sizing:content-box;
+            box-sizing:content-box
+        }
+    }
+    .content-left,.content-right{
+        position:relative;
+        top:60px;
+    }
+    .content-left span{
+        float:right;
+        margin-left:25px
+    }
+    .content-right span{
+        float:left;
+        margin-right:25px
+    }
+    .box-item{
+        padding-bottom:40px;
+        .icon{
+            background:#1BBC9A;
+            text-align:center;
+            margin-top:12px;
+            -webkit-transition:background .2s,color .2s;
+            -moz-transition:background .2s,color .2s;
+            transition:background .2s,color .2s;
+            &:after{
+                top:0;
+                left:0;
+                box-shadow:0 0 0 4px #000;
+                -webkit-transition:-webkit-transform .2s,opacity .2s;
+                -moz-transition:-webkit-transform .2s,opacity .2s;
+                transition:-webkit-transform .2s,opacity .2s;
+                -webkit-transform:scale(0.8);
+                -moz-transform:scale(0.8);
+                transform:scale(0.8);
+                opacity:0;
+            }
+            i{
+                color:#E54D3D;
+                font-size:24px;
+                line-height:60px;
+            }
+        }
+        .text {
+            h4{
+                color:#000;
+                font-weight:700;
+                line-height:22px;
+                text-transform:uppercase;
+            }
+            p{
+                color:#BABABA;
+                font-weight:300;
+                font-size:14px;
+                line-height:22px;
+            }
+        }
+        &:hover .icon{
+            background:#E54D3D;
+            i{
+                color:#fff;
+            }
+            &:after{
+                -webkit-transform:scale(1.1);
+                -moz-transform:scale(1.1);
+                transform:scale(1.1);
+                opacity:1;
+            }
+        }
+    }
+    .show-box{
+        padding:22px 64px;
+    }
+}
+
